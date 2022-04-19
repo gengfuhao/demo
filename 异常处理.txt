@@ -1,0 +1,69 @@
+异常语句块
+thow new ArithmeticException("Divisor cannot be zero");
+try{
+Code to run;
+A statement or a method that may throw an exception;
+More code to run;
+}catch(type ex){
+ Code to process the exception;
+}
+
+异常类型 
+1；免检异常 euntimeexception,error
+2；必检异常 其他
+
+throws声明异常
+throw抛出异常======== 
+try catch捕获异常
+
+Java类库中本身就有很多类可以抛出异常
+
+
+
+
+Finally语句一定会被执行 ；是否发生异常都被执行
+
+重新抛出异常
+try{
+ Statements;
+}
+ catch(TheException ex){
+ Perform operations before exits;
+sHow ex;
+}
+
+
+System.exit(0);  正常终止
+System.exit(1);  非正常终止
+
+
+throwable（exception,error）
+
+（程序和外部环境导致）exception(classNotfoundexception,IOException（和输入输出有关，打开不存在的文件）,runtimeexception（运行时异常，程序设计的错误)
+(系统错误，由java 虚拟机抛出的错误)error(linkageerror（由于依赖 发生修改而导致不兼容）,VirtualMachineError（虚拟机崩溃）)
+常见的 RuntimeException 有哪些？
+ClassCastException(类转换异常)
+IndexOutOfBoundsException(数组越界)
+NullPointerException(空指针)
+ArrayStoreException(数据存储异常，操作数组时类型不一致)
+还有IO操作的BufferOverflowException异常
+
+
+
+
+Java常见异常有哪些
+ava.lang.IllegalAccessError：违法访问错误。当一个应用试图访问、修改某个类的域（Field）或者调用其方法，但是又违反域或方法的可见性声明，则抛出该异常。
+java.lang.InstantiationError：实例化错误。当一个应用试图通过Java的new操作符构造一个抽象类或者接口时抛出该异常.
+java.lang.OutOfMemoryError：内存不足错误。当可用内存不足以让Java虚拟机分配给一个对象时抛出该错误。
+java.lang.StackOverflowError：堆栈溢出错误。当一个应用递归调用的层次太深而导致堆栈溢出或者陷入死循环时抛出该错误。
+java.lang.ClassCastException：类造型异常。假设有类A和B（A不是B的父类或子类），O是A的实例，那么当强制将O构造为类B的实例时抛出该异常。该异常经常被称为强制类型转换异常。
+java.lang.ClassNotFoundException：找不到类异常。当应用试图根据字符串形式的类名构造类，而在遍历CLASSPAH之后找不到对应名称的class文件时，抛出该异常。
+java.lang.ArithmeticException：算术条件异常。譬如：整数除零等。
+java.lang.ArrayIndexOutOfBoundsException：数组索引越界异常。当对数组的索引值为负数或大于等于数组大小时抛出。
+java.lang.IndexOutOfBoundsException：索引越界异常。当访问某个序列的索引值小于0或大于等于序列大小时，抛出该异常。
+java.lang.InstantiationException：实例化异常。当试图通过newInstance()方法创建某个类的实例，而该类是一个抽象类或接口时，抛出该异常。
+java.lang.NoSuchFieldException：属性不存在异常。当访问某个类的不存在的属性时抛出该异常。
+java.lang.NoSuchMethodException：方法不存在异常。当访问某个类的不存在的方法时抛出该异常。
+java.lang.NullPointerException：空指针异常。当应用试图在要求使用对象的地方使用了null时，抛出该异常。譬如：调用null对象的实例方法、访问null对象的属性、计算null对象的长度、使用throw语句抛出null等等。
+java.lang.NumberFormatException：数字格式异常。当试图将一个String转换为指定的数字类型，而该字符串确不满足数字类型要求的格式时，抛出该异常。
+java.lang.StringIndexOutOfBoundsException：字符串索引越界异常。当使用索引值访问某个字符串中的字符，而该索引值小于0或大于等于序列大小时，抛出该异常。

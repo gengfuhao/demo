@@ -1,0 +1,22 @@
+.编写代码
+
+command+option+S：快速生成代码，Getter&Setter，Constructor等
+command+option+M：将某段代码抽出放在一个单独的方法里
+操作方法：选中一段想封装的代码，然后快捷键 command+option+M
+command+option+R：批量重命名某个变量名或者字段(field)
+command+shift+O：可以用作导入包，也可用作整理包（删除没用的包，重复包等等）
+Option+/ ：代码提示，比如输入syso然后快捷键就能快速打出System.out.println
+Command+单击：查看源码
+command+Z：撤销上一步操作
+二.代码修改
+
+command+／： 注释或反注释所选中的所有行，没选默认只注释当前行。通常与shift+up和shift+down配合使用。
+shift+⬆️和shift+⬇️ ：选中上一行与选中下一行
+command+option+⬇️和command+option+↑：复制当前行到下一行/ 复制当前行到下一行
+option+⬆️和option+⬇️ ：向上移动当前行/ 向下移动当前行
+Command+←和Command+→：移动光标至当前行的行首 / 移动光标至当前行的行尾
+command+[和command+]：返回前一个位置 / 返回下一个位置
+Command+o:显示类中方法和属性的大纲，能快速定位类的方法和属性，在查找BUG时非常游泳池
+
+
+Mac中Eclipse代码自动整理快捷键是  command+shift+f

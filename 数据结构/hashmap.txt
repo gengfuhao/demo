@@ -1,0 +1,93 @@
+HashCode经常用于确定对象的存储地址；
+
+Hash map
+
+//引入 HashMap 类      
+import java.util.HashMap;
+
+public class RunoobTest {
+    public static void main(String[] args) {
+        // 创建 HashMap 对象 Sites
+        HashMap<Integer, String> Sites = new HashMap<Integer, String>();
+        // 添加键值对
+        Sites.put(1, "Google");
+        Sites.put(2, "Runoob");
+        Sites.put(3, "Taobao");
+        Sites.put(4, "Zhihu");
+        System.out.println(Sites);
+    }
+}
+
+
+访问元素
+我们可以使用 get(key) 方法来获取 key 对应的 value:
+
+System.out.println(Sites.get(3));
+
+删除元素
+我们可以使用 remove(key) 方法来删除 key 对应的键值对(key-value):
+Sites.remove(4);
+
+删除所有键值对(key-value)可以使用 clear 方法：
+
+如果要计算 HashMap 中的元素数量可以使用 size() 方法：
+
+
+迭代 HashMap
+可以使用 for-each 来迭代 HashMap 中的元素。
+如果你只想获取 key，可以使用 keySet() 方法，然后可以通过 get(key) 获取对应的 value，如果你只想获取 value，可以使用 values() 方法。
+
+
+
+        // 输出 key 和 value
+        for (Integer i : Sites.keySet()) {
+            System.out.println("key: " + i + " value: " + Sites.get(i));
+        }
+        // 返回所有 value 值
+        for(String value: Sites.values()) {
+          // 输出每一个value
+          System.out.print(value + ", ");
+        }
+
+
+for(Map.Entry<String,Integer>test1:test.entrySet()) {
+			System.out.println(test1.getKey());
+			System.out.println(test1.getValue());
+			
+			
+		}
+
+
+
+Test.keyset();
+Test.values();
+
+
+		for(Map.Entry<String,Integer>test1:test.entrySet()) {
+			System.out.println(test1.getKey()+"getvalues"+test1.getValue());
+			
+			
+			
+		}
+
+Hash map 中更改数据也可以使用put来覆盖
+
+
+
+
+
+遍历器的使用
+
+                 Set set =test.entrySet();
+		Iterator iterator =set.iterator();
+		while(iterator.hasNext()) {
+			Map.Entry entry =(Map.Entry)iterator.next();
+			System.out.println(entry.getKey()+"      "+entry.getValue());
+			
+		}
+
+
+Hash 冲突；不同对象算出来的数组下标是相同的
+解决方案
+1；单向链表
+2；红黑树

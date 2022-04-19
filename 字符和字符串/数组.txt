@@ -1,0 +1,27 @@
+char[] a类型的数组 可以直接输出，eg System.out.println(a),这是char[]类型数组特殊的一点
+
+random shuffling 打乱数组
+for(int i=0;,matrixi.length;i++){
+   for(int j=0;j<matrixi[i].length){
+
+     int i1=(int)(Math.random*matrixi.length);
+     int j1=(int)(Math.random*matrixi.length);
+      Double temp=matrixi[i][j];
+      matixi[I][j]=matrixi[i1][j1];
+      matrixi[i1][j1]=temp;
+}
+ 
+  
+}
+
+
+数组的输出
+
+一维数组的输出 toString()适用于一维数组，但不适用于多维数组
+二维数组的输出 deepToString()适用于一维和多维，但不适用于基元的一维数组
+             也可以通过foreach输出二维数组
+             for(int[] m:a) {
+	          for(int n:m) {
+		      System.out.print(n+" ,");
+	          }
+              }

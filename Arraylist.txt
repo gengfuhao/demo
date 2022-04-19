@@ -1,0 +1,36 @@
+Arraylist
+
+List<String> list=new ArrayList();
+查找特别快
+插入，删除比较慢
+
+LinkedList
+
+List<String> list=new LinkedList<>();
+查找比较慢
+插入比较快
+
+
+stack栈
+先进后出
+定义
+Stack<Integer> stack = new Stack<>();
+Stack.push(1);---存入数据；
+stack.pop（）；---取一个数据
+stack.peek（）；--查看数据
+stack.isEmpty（）--查看栈中是否为空
+
+Queue队列
+First in first out
+
+先进先出
+Queue<Integer> queue=new LinkedList<>();
+queue.offer(1);--添加元素--
+queue.add（）；---添加元素
+queue。poll（）；--删除一个元素
+queue.peek();--查看元素
+queue.element()--
+
+
+
+

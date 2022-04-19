@@ -1,0 +1,16 @@
+正则表达式
+
+1；
+正则表示定义了字符串的模式
+2；
+正则表达式可以用来搜索，编辑，处理文本
+3；
+正则表达式不仅限于一种语言，但是每种语言都有细微的差别
+4；
+正则表达式i是一种用来匹配字符串的强有力的武器。java内置了强大的正则表达式的支持
+
+Pattern类用于创建一个正则表达式，也可以说是创建一个匹配模式，可以通过两个静态方法创建：compile(String regex)和compile(String regex,int flags)，其中regex是正则表达式，flags为可选模式(如：Pattern.CASE_INSENSITIVE 忽略大小写)
+eg
+Pattern pattern = Pattern.compile("Java");定义匹配模式（搜索的条件）
+Matcher matcher=pattern.matcher("Java welcome");  保存查找匹配之后的结果
+System.out.println(pattern.pattern());//返回此模式的正则表达式即Java

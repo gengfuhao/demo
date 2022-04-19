@@ -1,0 +1,82 @@
+字符和字符串的定义
+1  Char a='A'; //'A'='\u0041'
+2. String a="welcome come to java";
+
+字符char类型的最大容量为2的16次方（两个字节）即65536，如果要用的字符超过65536，可以使用char字符中包装类character，
+Char[] a=character.tochars(Ox....)来输出字符
+
+特殊字符的转义 使用\
+
+字符和数值之间的类型转换
+数值类型转为char类型，需要强制转换，而char类型转为数值类型可以直接赋值（过程会把高位丢失）
+
+字符和整数相加输出的为ASC｜｜码和整数相加的结果
+字符串类型+其他类型结果都为字符串
+
+字符的比较
+‘A’>'b' 返回的为boolean型
+
+字符串String
+
+String 定义的变量为引用变量 也为实例 所以使用之前要创建一个实例对象 eg String a="java";
+而Math为静态方法，直接调用
+
+String类的方法有
+length（）；字符串长度
+charAt（）；返回指定字符串中的字符
+Concat（）；字符串的拼接 2两个字符串直接相加也可以
+substring(0,11);[0,11)的字符串的提取
+substring(5);以第五个字符为起始到最后字符的输出
+
+
+字符串的比较
+S1.equals(s2);比较的为内容哦.返回内容为boolean
+而s1==s2;String为引用类型 这样比较的为引用地址
+S1.compareto(s2);相等为0，s1>s2返回为正
+S1.indexof(‘W’)return 0；S1=“Welcome”返回的为字符串中该字符的下标 也可以判断一个字符串是不是另一个字符串的子串
+
+
+字符串和字符数组的转换
+1；
+char[] a=b.toCharArray();
+2;
+String b=new String(a);
+String b=String.valueof(a);
+3;
+String b=String.valueof(c);数值（字符）转字符串
+4；
++“”转换成字符串
+
+用instanceof可以判断是否转换成功eg   b instanceof String-- true
+
+从控制台输入字符和字符串
+String a=input.nextLine();
+char b=a.charAt(0);
+
+字符串和数字间的转换
+1。 String s1="123";内容必须为数值
+Int a=Integer.parseInt(s1);
+2。String s2=123+"";
+
+
+
+
+
+Integer.parseInt(s)是把字符串解析成int基本类型，Integer.valueOf(s)是把字符串解析成Integer对象类型，其实int就是Integer解包装，
+Integer就是int的包装，在jdk8中已经自动实现了自动解包装和自动包装，所以两种方式都能得到想要的整数值。
+
+
+StringBuilder(单线程)  Stringbuffer（多线程）
+
+StringBuilder sb = new StringBuilder();
+Sb.append("welcome");
+Sb.append(' ');
+Sb.append("to");
+Sb.append(' ');
+Sb.append("java");
+(此时没有生成字符串，在缓存区，调用toString方法生成字符串)
+System.out.println(sb.toString())----welcome to java
+
+
+Delete(8,11),deletecharAt(3),reverse()--字符串逆序
+

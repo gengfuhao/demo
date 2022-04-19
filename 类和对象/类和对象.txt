@@ -1,0 +1,103 @@
+类和对象的使用
+1。创建类，设计类的成员
+2  创建类的对象
+3  通过对象.属性 对象.方法 调用对象的结构
+
+对象 （包括属性和方法）在创建对象时，使用new关键字调用构造方法，构造方法用于初始化对象。
+
+circle mycircle=new circle（）；
+上面可以说明三件事
+1；声明对象mycircle，引用变量；
+2；创建对象new circle（）；
+3；把指向circle（）对象的引用传给mycircle对象；
+
+实例方法和静态方法
+
+静态方法直接使用 eg Math.random；
+实例方法需要创建一个实例之后再调用
+
+构造方法
+1；没有返回值void
+2；和类同名
+3；初始化实例
+
+对象数组
+circle【】 circlearray=new circle【10】；
+定义了十个包含circle对象的数组
+
+可以把二个类定义在一个包中，但只能用一个public关键字修饰，通过javac编译后产生两个字节码文件。
+
+
+Date类（需要创建实例）
+getTime（） 时间戳
+toString（） 当前时间
+
+Random()类（）需要创建实例
+
+访问一个类的静态变量。类名.静态变量
+
+实例方法--调用--（实例）（静态）方法和变量
+静态方法--调用--（静态）方法和变量
+
+
+可见性修饰符 public ,protected(不同包中🙅‍♂️), package（不同包和不同包的子类中🙅‍♂️）, private
+
+对于数据封装域private，可以通过get 和set方法来修改
+
+String类
+用字符串直接量创建的，s1，s2； 
+s1，s2的内容一样的情况下，s1，s2指向同一个地址，位于常量池，而new出来的字符串位于栈内，不一样的地址；
+
+字符串构造String
+1；直接
+2；使用char【】 array={'a','b','c'};常量池
+ String  m=new String(array)
+3;String m=new String("abc");位于堆内存
+
+正则表达式
+1; "java".matches("java");--true
+   "java".equals("java")---true
+
+
+2;  "Java is fun".matches{"java.*"}---true
+   "Java is cool".matches("java.*")---true
+
+3;  "440-02-4534".matches("\\d{3}-\\d{2}-\\d{4}")
+
+
+
+将基本数据类型作为对象处理
+——————包装类——————	
+
+
+super关键字
+1；调用父类的构造方法和普通方法
+
+自类的构造方法在进行自己方法之前首先调用父类的构造方法
+
+方法重写和方法重载
+
+多态
+子类是父类的特俗化 。每个子类的实例都是父类的实例
+
+动态绑定
+Object(声明类型)= new （实际类型）ceometricobject();
+
+
+对象转换
+object o=newStudent();
+m(o);  
+上面两句等同于m(new student());---隐式转换
+student b=（student）o;   显示转换
+
+instanceoof运算符
+object o=new circle();
+if(o instances circle) --判断o是不是circle的实例
+
+Object中的equals方法是比较引用是不是一样
+如果比较内容要重写equals方法；
+
+
+防止扩展和重写
+用final修饰方法和类，方法和类就不能扩展与重写
+

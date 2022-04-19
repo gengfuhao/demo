@@ -1,0 +1,14 @@
+相对文件名
+绝对文件名
+
+file类
+只关注文件本身，不关注文件内容。
+Exists（）判断文件是否存在
+
+I/O类=====Scanner和PrintWrite
+
+Try-with-resources自动关闭资源
+
+Try（声明并创建资源）{
+使用资源
+}

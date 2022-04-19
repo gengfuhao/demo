@@ -1,0 +1,53 @@
+1、Arrays.sort(int[] a)
+
+这种形式是对一个数组的所有元素进行排序，并且是按从小到大的顺序。
+
+public class Test {
+    public static void main(String[] args) {
+
+        int[] a = {9, 8, 7, 2, 3, 4, 1, 0, 6, 5};
+        Arrays.sort(a);
+        for(int i = 0; i < a.length; i ++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+————————————————
+
+import java.util.Comparator;
+
+public class Test{
+    public static void main(String[] args) {
+        //注意，要想改变默认的排列顺序，不能使用基本类型（int,double, char）
+        //而要使用它们对应的类
+        Integer[] a = {9, 8, 7, 2, 3, 4, 1, 0, 6, 5};
+        //定义一个自定义类MyComparator的对象
+        Comparator cmp = new MyComparator();
+        Arrays.sort(a, cmp);
+        for(int i = 0; i < a.length; i ++) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}
+
+
+//Comparator是一个接口，所以这里我们自己定义的类MyComparator要implents该接口，而不是extends Comparator
+
+class MyComparator implements Comparator<Integer>{
+    @Override
+    public int compare(Integer o1, Integer o2) {
+        //如果n1小于n2，我们就返回正值，如果n1大于n2我们就返回负值，
+        //这样颠倒一下，就可以实现反向排序了
+        if(o1 < o2) { 
+            return 1;
+        }else if(o1 > o2) {
+            return -1;
+        }else {
+            return 0;
+        }
+    }
+}
+
+//运行结果如下：
+//9 8 7 6 5 4 3 2 1 0 
+————————————————

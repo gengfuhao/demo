@@ -1,0 +1,7 @@
+注解
+
+@Override
+
+@Deprecated。 表示不鼓励程序员使用这样的元素
+
+@SuppressWarinings 消除警报

@@ -1,0 +1,20 @@
+和hashmap不同
+Treemap的输出是排序的 按照升序排序
+
+Map<Integer,String> treetop = new TreeMap();
+Treetop.put(40000,"小明")；
+ 
+
+降序的话
+
+可以通过两种方式去实现自定义排序：
+第一种:
+定义一个类去实现Comparator接口，重写其中的compare方法。
+第二种：
+其实只是语法不同，在内部就new这个接口并重写里面的compare方法。
+
+
+
+
+拉姆达表达式
+hashmap.forEach((k,v)->{System.out.println(k+":"+v);});

@@ -1,0 +1,28 @@
+Hashset自带去重性
+
+Hashset.add("one");添加
+Hashset.remove("one");删除
+Hashset.contains("two1");查，返回boolean
+
+
+linkedHashset
+
+按照添加的顺序存储
+
+Treeset
+自动排序
+
+逆序的话
+Set<String> set=new TreeSet();
+Set s1=((Treeset<String>) set).descendingset
+--------------------------------------------------
+
+
+Set用于存储一组不重复的元素
+List用于存储一个有序元素的合集
+
+Collection 接口
+Set  \ List \ queue
+
+
+iterator迭代器
